@@ -79,7 +79,7 @@ This is where the BaseClass.py is created to move fixture redundant code. Any re
 Currently the only method I created in the BaseClass.py was logger, which is used in the test file to audit the actions executed rather than use the print statement.
 
 # Run all automation tests
-Using the pycharm terminal in the tests directory, run the following "py.test --html-report.html"
+Using the pycharm terminal in the tests directory, run the following "py.test"
 
 # Run specific automation 
 Using the pycharm terminal in the tests directory, run the following "py.test test_invalidCheckOut.py"
