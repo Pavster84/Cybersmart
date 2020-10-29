@@ -49,11 +49,13 @@ Example below of example of the code in CheckoutPage.py
         self.driver.find_element(*CheckOutPage.companyNameTxtBox).send_keys(companyName)
 
  - TestData packages
+ 
  Filename: CheckOutData.py
  This file is used to implement data driven mechanism by removing the hard code where the test will be running.
  This file is also used to cover all the combinations functions for selecting fields and the products using parameterisation tests with multiple data sets.
                           
 - Tests package 
+
 This is where the automation is executed using pytest, files names need to start with test. The class also inherits the baseClass in the Utilites package.
 This covers pytest.fixture which helps get data from the TestData package to get the data using data driven approach. Code below will indicate this.
 
@@ -71,6 +73,7 @@ Example of the logging below;
 2020-10-29 18:41:18,931 :INFO : test_valid_submission :Clicked submit form button and navigated to confirmation page
   
 - Utilites
+
 This is where the BaseClass.py is created to move fixture redundant code. Any repeated code which is used in multiple test cases would be put in methods so this could be shared across all the test files.
   
 Currently the only method I created in the BaseClass.py was logger, which is used in the test file to audit the actions executed rather than use the print statement.
