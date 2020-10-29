@@ -109,6 +109,6 @@ Another framework to consider for the engineering team is BDD framework using th
 
 Automation of critical areas of the system will help free up time for the test team to perform more exploratory testing and black box design techniques.
 
-Regression tests to run to ensure new code has not broken existing functionality so that the production team are satsifed that test coverage on key functionality has been tested. Reports of tests executed will then be given to the team to indicate test results.
+Regression tests automated to run to ensure new code has not broken existing functionality so that the production team are satsifed that test coverage on key functionality has been tested. Reports of tests executed will then be given to the team to indicate test results.
 
 
