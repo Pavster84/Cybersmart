@@ -50,10 +50,10 @@ Example below of example of the code in CheckoutPage.py
  - TestData packages
  Filename: CheckOutData.py
  This file is used to implement data driven mechanism by removing the hard code where the test will be running.
- This file is also used to cover all the combinations must functions and all products selected using parameterisation tests with multiple data sets.
+ This file is also used to cover all the combinations functions for selecting fields and the products using parameterisation tests with multiple data sets.
                           
 - Tests package 
-This is where the automation is executed using pytest, files names need to start with test. The class also inherits the baseClass.
+This is where the automation is executed using pytest, files names need to start with test. The class also inherits the baseClass in the Utilites package.
 This covers pytest.fixture which helps get data from the TestData package to get the data using data driven approach. Code below will indicate this.
 
   checkOutPage.set_admin_last_name_txt_box(getData['lastName'])
@@ -63,17 +63,16 @@ This covers pytest.fixture which helps get data from the TestData package to get
         return request.param
         
 Filename: confttest.py will be used across multiple test cases, this is where the set up and tear down of tests will occur. This file also indicates what browser user may want the test to run on.
-  If no browser is provided then by default chrome is selected.
+If no browser is provided then by default chrome is selected.
   
-  Filename: logfile.log is an audit of all the actions logged when the test was executed. This is driven by the BaseClass which is store in the 'Utilities' package
-  Example of the logging below;
-  
-  2020-10-29 18:41:18,931 :INFO : test_valid_submission :Clicked submit form button and navigated to confirmation page
+Filename: logfile.log is an audit of all the actions logged when the test was executed. This is driven by the BaseClass which is store in the 'Utilities' package
+Example of the logging below;
+2020-10-29 18:41:18,931 :INFO : test_valid_submission :Clicked submit form button and navigated to confirmation page
   
 - Utilites
-  This is where the BaseClass.py is created to move fixture redundant code. Any repeated code which is used in multiple test cases would be put in methods so this could be shared across all the test files.
+This is where the BaseClass.py is created to move fixture redundant code. Any repeated code which is used in multiple test cases would be put in methods so this could be shared across all the test files.
   
-  Currently the only method I created in the BaseClass.py was logger, which is used in the test file to audit the actions executed rather than you the print statement.
+Currently the only method I created in the BaseClass.py was logger, which is used in the test file to audit the actions executed rather than use the print statement.
 
 # Run all automation tests
 Using the pycharm terminal in the tests directory, run the following "py.test --html-report.html"
@@ -98,13 +97,12 @@ The following automation will be used from e2e tests (UI testing). This could be
 Future plans should also cater for API tests to give more test coverage.
 
 -	What would be required to adopt in a Product Engineering team?
-New functionalities to be discussed by the team collectively so that planning could be made on ensuring the acceptance criteria is met when the automation tests are created or amending scripts in order to achieve confidence that everything is working as expected.
+New functionalities to be discussed by the team collectively so that planning could be made on ensuring the acceptance criteria. As well an then planning of the automation tests from a QA perspective to ensure new or amending existing scripts are continuously updated in order to achieve confidence that everything is working as expected.
 
 Another framework to consider for the engineering team is BDD framework using the 'Behave' package. This allows test cases to be created using simple test language (gherkin). This helps technical team members to understand the scenarios executed and help improve the communication between technical and non-technical members.
 
 That automation of critical areas of the system will help the manual testers to perform more exploratory testing and black box design techniques.
 
-
-Regression tests to run to ensure new code has not broken existing functionality so that the production team are satsifed that test coverage on key functionality has been tested.
+Regression tests to run to ensure new code has not broken existing functionality so that the production team are satsifed that test coverage on key functionality has been tested. Reports of tests executed will then be given to the team to indicate results.
 
 
