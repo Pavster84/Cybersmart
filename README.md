@@ -1,7 +1,7 @@
 # Cybersmart Automation
 
 # Introduction
-Create automation framework for the website https://hudson-poutine-83447.herokuapp.com/ using Python programming language with the pytest framework
+Create an automation framework for the website https://hudson-poutine-83447.herokuapp.com/ using Python programming language with the pytest framework
 
 Test the checkout functionality which consist of the following requirements
 -	Submit a checkout request
