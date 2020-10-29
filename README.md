@@ -10,11 +10,11 @@ Test the checkout functionality which consist of the following requirements
 
 # Pytest pro's
 - Used to create simple as well as complex functional test cases
-- Compatibale with oter test frameworks like unittest
+- Compatible  with other test frameworks like unittest
 - Supports fixtures and classes, to make it easier to create common test objects
 - Supports parameterization
 
-# Pre-requiste 
+# Pre-requisite 
 - Download python 3.x.x
 - Pycharm community editor needed to develop the automation tests
 - Chromedriver from selenium needs to be installed
@@ -74,4 +74,37 @@ Filename: confttest.py will be used across multiple test cases, this is where th
   This is where the BaseClass.py is created to move fixture redundant code. Any repeated code which is used in multiple test cases would be put in methods so this could be shared across all the test files.
   
   Currently the only method I created in the BaseClass.py was logger, which is used in the test file to audit the actions executed rather than you the print statement.
+
+# Run all automation tests
+Using the pycharm terminal in the tests directory, run the following "py.test --html-report.html"
+
+# Run specific automation 
+Using the pycharm terminal in the tests directory, run the following "py.test test_invalidCheckOut.py"
+
+# Run tests and generate reports
+"py.test --html-report.html"
+
+# Improvements and work still required
+- Generate HTML reports in the framework when the test is executed
+- Integrate framework to Jenkins to corporate CI
+- Create negative tests which cover the following;
+  - No input and click 'Submit' button and verify validation message is produced
+  - Invalid email
+  - When no product is selected
+  
+# Questions
+-	How this may be used in a wider team (think about different life cycles(Kanban/Scrum))?
+The following automation will be used from e2e tests (UI testing). This could be used as part of the regression or smoke test when testing on various environments.
+Future plans should also cater for API tests to give more test coverage.
+
+-	What would be required to adopt in a Product Engineering team?
+New functionalities to be discussed by the team collectively so that planning could be made on ensuring the acceptance criteria is met when the automation tests are created or amending scripts in order to achieve confidence that everything is working as expected.
+
+Another framework to consider for the engineering team is BDD framework using the 'Behave' package. This allows test cases to be created using simple test language (gherkin). This helps technical team members to understand the scenarios executed and help improve the communication between technical and non-technical members.
+
+That automation of critical areas of the system will help the manual testers to perform more exploratory testing and black box design techniques.
+
+
+Regression tests to run to ensure new code has not broken existing functionality so that the production team are satsifed that test coverage on key functionality has been tested.
+
 
