@@ -27,6 +27,7 @@ Test the checkout functionality which consist of the following requirements
 Create the following packages below;
 
 - PageObjects package
+
 This contains all the web elements, as well as the get and set methods. This is where the constructor is also used.
 
 Advantages of using page object mechanism
