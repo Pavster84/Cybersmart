@@ -93,10 +93,12 @@ Using the pycharm terminal in the tests directory, run the following "py.test te
   
 # Questions
 -	How this may be used in a wider team (think about different life cycles(Kanban/Scrum))?
+
 The following automation will be used from e2e tests (UI testing). This could be used as part of the regression or smoke test when testing on various environments.
 Future plans should also cater for API tests to give more test coverage.
 
 -	What would be required to adopt in a Product Engineering team?
+
 New functionalities to be discussed by the team collectively so that planning could be made on ensuring the acceptance criteria. As well an then planning of the automation tests from a QA perspective to ensure new or amending existing scripts are continuously updated in order to achieve confidence that everything is working as expected.
 
 Another framework to consider for the engineering team is BDD framework using the 'Behave' package. This allows test cases to be created using simple test language (gherkin). This helps technical team members to understand the scenarios executed and help improve the communication between technical and non-technical members.
